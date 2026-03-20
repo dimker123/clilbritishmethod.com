@@ -184,7 +184,7 @@ button, input, select { font-family: inherit; }
 .logo-item:hover { opacity: 1; filter: grayscale(0); }
 
 /* ================== HEADINGS ================== */
-.section-heading { font-size: 3rem; letter-spacing: -1px; margin-bottom: 15px; }
+.section-heading { font-size: 3rem; letter-spacing: -1px; margin-bottom: 30px; }
 .section-subheading { font-size: 1.15rem; color: var(--clr-text-muted); max-width: 600px; margin: 0 auto 50px auto; }
 .eyebrow { display: inline-block; font-size: 0.85rem; font-weight: 700; color: var(--clr-accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
 
@@ -243,8 +243,9 @@ button, input, select { font-family: inherit; }
 .rev-info span { font-size: 0.85rem; color: var(--clr-text-muted); }
 .featured-review .rev-info span { color: rgba(255,255,255,0.7); }
 
-/* ================== FAQ ================== */
-.faq-section { max-width: 800px; margin: 0 auto; }
+/* ================== FAQ ACCORDION ================== */
+.faq-section { background: #fff; padding-bottom: 50px; max-width: 800px; margin: 0 auto; }
+.faq-header { margin-bottom: 40px; }
 .faq-accordion { display: flex; flex-direction: column; gap: 15px; }
 .faq-item { background: #fff; border: 1px solid #e2e8f0; border-radius: var(--radius-md); overflow: hidden; }
 .faq-question { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 25px; background: none; border: none; font-size: 1.15rem; font-weight: 600; color: var(--clr-brand); cursor: pointer; text-align: left; }
@@ -254,7 +255,7 @@ button, input, select { font-family: inherit; }
 .faq-item.active .faq-answer { max-height: 200px; padding-bottom: 25px; }
 
 /* ================== FUNNEL CTA ================== */
-.funnel-section { position: relative; }
+.funnel-section { position: relative; padding-top: 50px; }
 .funnel-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; background: var(--clr-bg-alt); padding: 60px; border-radius: var(--radius-lg); align-items: stretch; }
 .funnel-text { display: flex; flex-direction: column; justify-content: center; height: 100%; }
 .funnel-text h2 { font-size: 2.5rem; margin-bottom: 15px; }
