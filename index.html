@@ -326,27 +326,33 @@
             <div class="funnel-form-wrapper glass-panel reveal-fade-in">
                 <h3>Solicita tu reunión B2B</h3>
                 <p>Un responsable de expansión se pondrá en contacto con tu academia.</p>
-                <form class="premium-form" id="lead-form">
+                   <form action="contacto.php" method="POST" class="premium-form">
                     <div class="input-group">
                         <label>Nombre del Contacto / Director</label>
-                        <input type="text" placeholder="Ej: Carlos Navarro" required>
+                        <input type="text" name="nombre" placeholder="Ej: Carlos Navarro" required>
                     </div>
                     <div class="input-group">
                         <label>Nombre de la Academia / Colegio</label>
-                        <input type="text" placeholder="Ej: Academia XYZ" required>
+                        <input type="text" name="academia" placeholder="Ej: Academia XYZ" required>
                     </div>
                     <div class="input-group has-icon">
                         <label>Email o Teléfono Profesional</label>
-                        <input type="text" placeholder="direccion@tuacademia.com" required>
+                        <input type="text" name="contacto" placeholder="direccion@tuacademia.com" required>
                     </div>
                     <div class="input-group">
                         <label>Nº alumnos aproximado actuálmente</label>
-                        <select>
-                            <option>Centro Nuevo (0 - 50 alumnos)</option>
-                            <option>Centro Mediano (50 - 200 alumnos)</option>
-                            <option>Centro Grande (+200 alumnos / Colegio)</option>
+                        <select name="alumnos" required>
+                            <option value="0 - 50 alumnos">Centro Nuevo (0 - 50 alumnos)</option>
+                            <option value="50 - 200 alumnos">Centro Mediano (50 - 200 alumnos)</option>
+                            <option value="+200 alumnos / Colegio">Centro Grande (+200 alumnos / Colegio)</option>
                         </select>
                     </div>
+                    
+                    <div class="input-group checkbox-group" style="display: flex; gap: 10px; align-items: flex-start; margin-top: 5px;">
+                        <input type="checkbox" id="privacidad" name="privacidad" required style="width: auto; margin-top: 4px; cursor: pointer;">
+                        <label for="privacidad" style="font-size: 0.85rem; font-weight: normal; margin-bottom: 0; cursor: pointer;">He leído y acepto la <a href="politica-de-privacidad" target="_blank" style="color: var(--clr-accent); text-decoration: underline;">Política de Privacidad</a> *</label>
+                    </div>
+
                     <button type="submit" class="btn btn-primary-lg full-w mt-2">Agendar Demostración (Centros) <i data-feather="arrow-right"></i></button>
                     <small class="secure-text"><i data-feather="lock"></i> Trato estrictamente confidencial.</small>
                 </form>
