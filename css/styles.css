@@ -339,15 +339,16 @@ button, input, select { font-family: inherit; }
     .hero-badge { margin-top: 30px; }
     .hero-cta-group { flex-direction: column; width: 100%; }
     .hero-cta-group .btn { width: 100%; }
-    .glass-panel { margin-bottom: 50px; }
+    .glass-panel { margin-bottom: 0px; }
     .float-1 { left: 5px; bottom: 10px; padding: 6px 10px; font-size: 0.75rem; max-width: 90%; }
     .float-2 { right: 5px; top: 10px; padding: 6px 10px; font-size: 0.75rem; max-width: 90%; }
     
     /* App Section */
     .app-visual { margin-bottom: 40px; }
     
-    /* Padding Reductions */
-    .funnel-wrapper { padding: 50px 20px; gap: 40px; }
+    /* Padding Reductions & Funnel Layout */
+    .funnel-section { padding-bottom: 0px !important; }
+    .funnel-wrapper { padding: 50px 20px; gap: 40px; border-radius: 0px; }
     .funnel-form-wrapper { padding: 25px 20px; }
     .feature-card, .stage-content { padding: 30px 25px; }
     .review-box { padding: 25px 20px; }
