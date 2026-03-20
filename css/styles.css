@@ -365,6 +365,9 @@ button, input, select { font-family: inherit; }
 
     /* Existing grid rules */
     .features-grid { grid-template-columns: 1fr; }
+    .app-grid { grid-template-columns: 1fr; }
+    .app-features li { flex-direction: column; text-align: center; align-items: center; }
+    .app-features svg { width: 35px; height: 35px; }
     .masonry-grid { column-count: 1; }
     .premium-card { transform: none; }
     .stage-card { flex-direction: column; }
