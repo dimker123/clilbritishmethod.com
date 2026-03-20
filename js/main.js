@@ -79,6 +79,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animElements.forEach(el => animObserver.observe(el));
 
+    // Stage Cards Scroll Highlight Observer
+    const stageCards = document.querySelectorAll('.stage-card');
+    const stageObserverOptions = {
+        rootMargin: "-30% 0px -30% 0px",
+        threshold: 0
+    };
+
+    const stageObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-focused');
+            } else {
+                entry.target.classList.remove('is-focused');
+            }
+        });
+    }, stageObserverOptions);
+
+    stageCards.forEach(card => {
+        stageObserver.observe(card);
+    });
+
+    // Feather Icons
+    feather.replace();
     /* =======================================
        5. FAQ ACCORDION
     ======================================= */

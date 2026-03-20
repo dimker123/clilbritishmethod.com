@@ -206,11 +206,11 @@ button, input, select { font-family: inherit; }
 /* ================== STAGES TIMELINE ================== */
 .stages-timeline { display: flex; flex-direction: column; gap: 25px; max-width: 900px; margin: 0 auto; }
 .stage-card { display: flex; align-items: stretch; background: #fff; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid #f1f5f9; transition: all 0.4s var(--ease-out); }
-.stage-card:hover { transform: translateX(10px) scale(1.02); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1); border-color: var(--clr-accent); }
+.stage-card:hover, .stage-card.is-focused { transform: translateX(10px) scale(1.02); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1); border-color: var(--clr-accent); }
 .stage-num { width: 120px; background: var(--clr-bg-alt); display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 3rem; font-weight: 900; color: #cbd5e1; border-right: 1px dashed #e2e8f0; transition: all 0.4s var(--ease-out); position: relative; z-index: 1; }
-.stage-card:hover .stage-num { background: var(--grad-gold); color: white; border-right-color: transparent; }
+.stage-card:hover .stage-num, .stage-card.is-focused .stage-num { background: var(--grad-gold); color: white; border-right-color: transparent; }
 .stage-content { padding: 40px; flex: 1; text-align: left; transition: all 0.4s var(--ease-out); }
-.stage-card:hover .stage-content h3 { color: var(--clr-accent); }
+.stage-card:hover .stage-content h3, .stage-card.is-focused .stage-content h3 { color: var(--clr-accent); }
 .stage-content h3 { font-size: 1.8rem; margin-bottom: 5px; }
 .stage-content h4 { font-size: 1rem; color: var(--clr-text-muted); font-weight: 500; font-family: var(--font-body); margin-bottom: 15px; }
 
