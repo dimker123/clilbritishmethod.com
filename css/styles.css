@@ -324,7 +324,7 @@ button, input, select { font-family: inherit; }
 
     /* Typography fixes */
     .hero-title { font-size: 2.4rem; }
-    .section-heading { font-size: 2.2rem; margin-bottom: 25px; }
+    .section-heading { font-size: 2.4rem; margin-bottom: 25px; }
     
     /* FAQ/Funnel Spacing (50px total) */
     .faq-section { padding-bottom: 25px; }
