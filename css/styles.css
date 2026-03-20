@@ -352,8 +352,8 @@ button, input, select { font-family: inherit; }
     .review-box { padding: 25px 20px; }
     
     /* Contact Actions Full Width */
-    .contact-actions { flex-direction: column; width: 100%; gap: 12px; }
-    .contact-actions .btn { width: 100%; justify-content: center; }
+    .contact-actions { display: flex !important; flex-direction: column !important; width: 100% !important; gap: 12px !important; margin-top: 20px; }
+    .contact-actions .btn { width: 100% !important; justify-content: center; display: flex !important; box-sizing: border-box; }
     
     /* Logos */
     .trust-strip { padding: 50px 0; }
