@@ -192,10 +192,10 @@ button, input, select { font-family: inherit; }
 .problem-section { background: #f8fafc; }
 .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: left; align-items: stretch; max-width: 900px; margin: 0 auto; }
 .feature-card { background: #fff; padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid #f1f5f9; display: flex; flex-direction: column; height: 100%; }
-.feature-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 1.5rem; }
+.feature-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px auto; font-size: 1.5rem; }
 .feature-icon.bad { background: #fee2e2; color: #ef4444; }
 .feature-icon.good { background: rgba(255,255,255,0.1); color: #10b981; }
-.feature-card h3 { font-size: 1.6rem; margin-bottom: 20px; line-height: 1.3; }
+.feature-card h3 { font-size: 1.6rem; margin-bottom: 20px; line-height: 1.3; text-align: center; }
 .feature-card ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 15px; }
 .feature-card li { display: flex; align-items: flex-start; font-size: 1.05rem; }
 .feature-card li::before { content: '→'; margin-right: 10px; font-weight: bold; color: #94a3b8; }
