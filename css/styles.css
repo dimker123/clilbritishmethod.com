@@ -360,6 +360,7 @@ button, input, select { font-family: inherit; }
     .trust-container { align-items: flex-start; width: fit-content; margin: 0 auto; }
     .logos { gap: 15px; flex-direction: column; align-items: flex-start; margin-top: 10px; width: 100%; justify-content: flex-start; }
     .logo-img-footer { height: 60px; width: auto; margin-bottom: 30px; }
+    .footer-logo { justify-content: center; }
 
     /* Existing grid rules */
     .features-grid { grid-template-columns: 1fr; }
