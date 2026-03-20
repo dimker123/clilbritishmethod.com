@@ -314,6 +314,11 @@ button, input, select { font-family: inherit; }
     .nav-links, .nav-actions .btn-premium { display: none; }
     .menu-btn { display: block; }
     .hero-title { font-size: 2.8rem; }
+    .hero-cta-group { flex-direction: column; width: 100%; }
+    .hero-cta-group .btn { width: 100%; white-space: normal; padding: 14px; text-align: center; }
+    .float-1 { left: -10px; bottom: 20px; padding: 8px 12px; font-size: 0.75rem; }
+    .float-2 { right: -10px; top: 30px; padding: 8px 12px; font-size: 0.75rem; }
+    .logos { gap: 25px; }
     .features-grid { grid-template-columns: 1fr; }
     .masonry-grid { column-count: 1; }
     .premium-card { transform: none; }
