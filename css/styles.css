@@ -94,7 +94,8 @@ button, input, select { font-family: inherit; }
 .btn-outline-brand:hover { background: var(--clr-brand); color: white; }
 .btn-whatsapp { background: #25D366; color: white; padding: 10px 18px; border-radius: var(--radius-sm); font-size: 0.9rem; }
 .btn-whatsapp:hover { background: #1ebe5d; color: white; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); transform: translateY(-2px); }
-.contact-actions { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
+.contact-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; width: 100%; }
+.contact-actions .btn { width: 100%; justify-content: center; }
 .full-w { width: 100%; }
 
 /* ================== NAVBAR ================== */
@@ -253,7 +254,8 @@ button, input, select { font-family: inherit; }
 
 /* ================== FUNNEL CTA ================== */
 .funnel-section { position: relative; }
-.funnel-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; background: var(--clr-bg-alt); padding: 60px; border-radius: var(--radius-lg); align-items: center; }
+.funnel-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; background: var(--clr-bg-alt); padding: 60px; border-radius: var(--radius-lg); align-items: stretch; }
+.funnel-text { display: flex; flex-direction: column; justify-content: center; height: 100%; }
 .funnel-text h2 { font-size: 2.5rem; margin-bottom: 15px; }
 .steps-list { display: flex; flex-direction: column; gap: 20px; }
 .funnel-step { display: flex; gap: 20px; }
