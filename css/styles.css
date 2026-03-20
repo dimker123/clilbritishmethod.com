@@ -4,19 +4,19 @@
 
    :root {
     /* Color Palette */
-    --clr-brand: #0f172a;       /* Dark slate modern blue */
-    --clr-brand-light: #1e293b;
-    --clr-accent: #f59e0b;      /* Bright vibrant gold/amber */
-    --clr-accent-hover: #d97706;
+    --clr-brand: #012169;       /* UK Royal Blue */
+    --clr-brand-light: #0a3188; /* Lighter blue */
+    --clr-accent: #C8102E;      /* UK Red */
+    --clr-accent-hover: #a00b23; /* Darker red */
     --clr-surface: #ffffff;
     --clr-bg-alt: #f8fafc;
     --clr-text-main: #334155;
     --clr-text-muted: #64748b;
     
     /* Gradients */
-    --grad-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    --grad-text: linear-gradient(to right, #0f172a, #3b82f6);
-    --grad-gold: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+    --grad-primary: linear-gradient(135deg, #012169 0%, #0a3188 100%);
+    --grad-text: linear-gradient(to right, #012169, #C8102E);
+    --grad-gold: linear-gradient(135deg, #e31837 0%, #a00b23 100%);
     
     /* Typography */
     --font-head: 'Outfit', sans-serif;
@@ -79,15 +79,15 @@ button, input, select { font-family: inherit; }
 }
 .btn-primary { background: var(--clr-brand); color: white; padding: 12px 28px; border-radius: var(--radius-pill); }
 .btn-accent { background: var(--clr-accent); color: white; padding: 12px 28px; border-radius: var(--radius-pill); border: 1px solid var(--clr-accent); transition: all 0.3s ease; }
-.btn-accent:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4); background: #d97706; border-color: #d97706; }
+.btn-accent:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(200, 16, 46, 0.4); background: var(--clr-accent-hover); border-color: var(--clr-accent-hover); }
 .btn-premium {
     background: var(--clr-brand); color: white;
     padding: 14px 32px; border-radius: var(--radius-pill);
     box-shadow: var(--shadow-md); border: 1px solid rgba(255,255,255,0.1);
 }
 .btn-premium:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); background: #000; }
-.btn-primary-lg { background: var(--clr-accent); color: white; padding: 16px 36px; border-radius: var(--radius-pill); font-size: 1.1rem; box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3); transition: all 0.3s ease; border: 1px solid transparent; }
-.btn-primary-lg:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4); background: #d97706; border-color: #d97706; }
+.btn-primary-lg { background: var(--clr-accent); color: white; padding: 16px 36px; border-radius: var(--radius-pill); font-size: 1.1rem; box-shadow: 0 10px 20px rgba(200, 16, 46, 0.3); transition: all 0.3s ease; border: 1px solid transparent; }
+.btn-primary-lg:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(200, 16, 46, 0.4); background: var(--clr-accent-hover); border-color: var(--clr-accent-hover); }
 .btn-text { color: var(--clr-brand); font-weight: 600; padding: 16px 20px; }
 .btn-text:hover { color: var(--clr-accent); }
 .full-w { width: 100%; }
@@ -135,7 +135,7 @@ button, input, select { font-family: inherit; }
 }
 .hero-bg-blob {
     position: absolute; top: -10%; right: -5%; width: 50vw; height: 50vw;
-    background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, rgba(200,16,46,0.1) 0%, rgba(255,255,255,0) 70%);
     border-radius: 50%; z-index: -1;
 }
 .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -262,7 +262,7 @@ button, input, select { font-family: inherit; }
 .premium-form { display: flex; flex-direction: column; gap: 15px; }
 .input-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--clr-brand); }
 .input-group input, .input-group select { width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); font-size: 1rem; color: var(--clr-brand); transition: var(--transition); background: #f8fafc; }
-.input-group input:focus, .input-group select:focus { outline: none; border-color: var(--clr-accent); background: #fff; box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1); }
+.input-group input:focus, .input-group select:focus { outline: none; border-color: var(--clr-accent); background: #fff; box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.1); }
 .secure-text { display: flex; justify-content: center; align-items: center; gap: 5px; color: #10b981; font-weight: 500; margin-top: 15px; }
 .secure-text svg { width: 14px; }
 
