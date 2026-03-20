@@ -17,6 +17,173 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <link rel="stylesheet" href="css/styles.css?v=6">
+
+    <!-- ============ SCHEMA.ORG STRUCTURED DATA ============ -->
+
+    <!-- 1. Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.clilbritishmethod.com/#organization",
+      "name": "CLIL British Method",
+      "url": "https://www.clilbritishmethod.com",
+      "logo": "https://www.clilbritishmethod.com/img/Logo_CLIL%20BRITISH_METHOD.png",
+      "description": "Metodología activa de inglés premiada por FECEI para centros educativos y academias. Implementa CLIL British Method y transforma la retención de alumnos y la rentabilidad de tu academia.",
+      "email": "info@clilbritishmethod.com",
+      "telephone": "+34618033679",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C. Puerto, 3",
+        "addressLocality": "Puertollano",
+        "addressRegion": "Ciudad Real",
+        "postalCode": "13500",
+        "addressCountry": "ES"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/clil-british-method",
+        "https://www.instagram.com/clilbritishmethod"
+      ],
+      "award": "Mejor Metodología Activa — FECEI"
+    }
+    </script>
+
+    <!-- 2. WebSite (enables Sitelinks Search Box) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.clilbritishmethod.com/#website",
+      "url": "https://www.clilbritishmethod.com",
+      "name": "CLIL British Method",
+      "description": "Implementa la metodología de inglés premiada por FECEI en tu centro educativo.",
+      "publisher": { "@id": "https://www.clilbritishmethod.com/#organization" },
+      "inLanguage": "es"
+    }
+    </script>
+
+    <!-- 3. ProfessionalService / EducationalOrganization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["ProfessionalService", "EducationalOrganization"],
+      "@id": "https://www.clilbritishmethod.com/#service",
+      "name": "CLIL British Method — Partner Program",
+      "url": "https://www.clilbritishmethod.com",
+      "image": "https://www.clilbritishmethod.com/img/hero_kids.png",
+      "description": "Programa B2B para academias e instituciones educativas que desean implementar la metodología CLIL (Content and Language Integrated Learning) y diferenciarse de la competencia.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "areaServed": "ES",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+34618033679",
+        "contactType": "sales",
+        "availableLanguage": ["Spanish", "English"]
+      },
+      "priceRange": "Consultar",
+      "parentOrganization": { "@id": "https://www.clilbritishmethod.com/#organization" }
+    }
+    </script>
+
+    <!-- 4. Service — Methodology Stages -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Metodología CLIL British Method",
+      "provider": { "@id": "https://www.clilbritishmethod.com/#organization" },
+      "serviceType": "Metodología educativa activa de inglés",
+      "description": "Currículum completo de inglés activo desde bebés hasta adultos: CLIL Babies (0-3 años), CLIL Juniors, CLIL Masters (Cambridge/Trinity) y CLIL Leaders.",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "areaServed": "ES",
+        "url": "https://www.clilbritishmethod.com/#empezar"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Etapas del Método CLIL",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "CLIL Babies",
+            "description": "Captación Temprana (0-3 años). Materiales basados en el juego y la emoción para una fonética perfecta."
+          },
+          {
+            "@type": "Offer",
+            "name": "CLIL Juniors",
+            "description": "Consolidación y Fidelización. Corners y recursos inmersivos para aulas de exploración lingüística."
+          },
+          {
+            "@type": "Offer",
+            "name": "CLIL Masters",
+            "description": "Excelencia en Certificaciones Oficiales B1/B2/C1 de Cambridge y Trinity de forma dinámica."
+          },
+          {
+            "@type": "Offer",
+            "name": "CLIL Leaders",
+            "description": "El Prestigio de tu Academia. Jóvenes capaces de argumentar, debatir y liderar en inglés."
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- 5. FAQPage (enables Google FAQ Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo formo a mis profesores en la metodología CLIL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Al convertirte en Centro Partner, proporcionamos un programa de onboarding intensivo para tu equipo docente, seguido de tutorías de seguimiento, manuales claros y acceso a recursos continuos para asegurar la calidad de implementación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿A partir de qué número de alumnos es rentable implementar el método?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nuestro modelo es escalable. Trabajamos tanto con pequeñas academias boutique de barrio hasta con macro-colegios concertados de más de 1.000 alumnos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los materiales están preparados para la nueva legislación educativa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Así es. Nuestro sistema fomenta el desarrollo de habilidades blandas (Soft Skills), el pensamiento crítico y aborda la Agenda 2030 indirectamente a lo largo de las unidades, superando los estándares educacionales modernos."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- 6. AggregateRating (review signals from testimonials page) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "CLIL British Method",
+      "url": "https://www.clilbritishmethod.com",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "4"
+      }
+    }
+    </script>
+
+    <!-- ============ END SCHEMA.ORG ============ -->
 </head>
 <body class="loading">
     <!-- NAVBAR (Glassmorphism) -->
