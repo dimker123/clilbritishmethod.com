@@ -346,11 +346,14 @@ button, input, select { font-family: inherit; }
     .app-visual { margin-bottom: 40px; }
     
     /* Padding Reductions */
-    .funnel-wrapper { padding: 30px 20px; gap: 40px; }
+    .funnel-wrapper { padding: 50px 20px; gap: 40px; }
     .funnel-form-wrapper { padding: 25px 20px; }
-    .feature-card { padding: 25px 20px; }
-    .stage-content { padding: 25px 20px; }
+    .feature-card, .stage-content { padding: 30px 25px; }
     .review-box { padding: 25px 20px; }
+    
+    /* Contact Actions Full Width */
+    .contact-actions { flex-direction: column; width: 100%; gap: 12px; }
+    .contact-actions .btn { width: 100%; justify-content: center; }
     
     /* Logos */
     .trust-strip { padding: 50px 0; }
