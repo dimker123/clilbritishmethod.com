@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
     if (mail($recipient, $subject, $email_content, $email_headers)) {
-        header("Location: index.html?success=1");
+        header("Location: /gracias");
     } else {
         http_response_code(500);
         echo "Error al enviar el correo.";
