@@ -1,11 +1,12 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = strip_tags(trim($_POST["nombre"]));
-    $academia = strip_tags(trim($_POST["academia"]));
-    $contacto = strip_tags(trim($_POST["contacto"]));
+    $academia = strip_tags(trim($_POST["academia"] ?? ""));
+    $email = strip_tags(trim($_POST["email"]));
+    $telefono = strip_tags(trim($_POST["telefono"]));
     $alumnos = strip_tags(trim($_POST["alumnos"]));
 
-    if (empty($nombre) || empty($academia) || empty($contacto)) {
+    if (empty($nombre) || empty($email) || empty($telefono)) {
         http_response_code(400);
         echo "Por favor, completa todos los campos requeridos.";
         exit;
@@ -16,12 +17,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $email_content = "Has recibido una nueva solicitud de academia.\n\n";
     $email_content .= "Nombre del Director: " . $nombre . "\n";
-    $email_content .= "Academia: " . $academia . "\n";
-    $email_content .= "Contacto (Email/Tlf): " . $contacto . "\n";
+    $email_content .= "Academia: " . ($academia ?: "No indicada") . "\n";
+    $email_content .= "Email Profesional: " . $email . "\n";
+    $email_content .= "Teléfono Profesional: " . $telefono . "\n";
     $email_content .= "Nº Alumnos: " . $alumnos . "\n";
 
     $email_headers = "From: info@clilbritishmethod.com\r\n";
-    $email_headers .= "Reply-To: " . $contacto . "\r\n";
+    $email_headers .= "Reply-To: " . $email . "\r\n";
     $email_headers .= "MIME-Version: 1.0\r\n";
     $email_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
     $email_headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
