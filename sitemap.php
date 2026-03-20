@@ -15,7 +15,7 @@ $urls = [
 
 // ── Detectar si es un crawler ──────────────────────────────────────────────
 $ua = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
-$isCrawler = preg_match('/bot|crawl|slurp|spider|google|bing|yahoo|baidu|duckduck|semrush|ahrefs|moz/i', $ua);
+$isCrawler = preg_match('/googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|facebot|ia_archiver|semrushbot|ahrefsbot|dotbot|serpstatbot|mj12bot|petalbot/i', $ua);
 
 // ── MODO XML (para crawlers / herramientas SEO) ────────────────────────────
 if ($isCrawler || isset($_GET['xml'])) {
