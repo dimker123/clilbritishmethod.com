@@ -90,6 +90,11 @@ button, input, select { font-family: inherit; }
 .btn-primary-lg:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(200, 16, 46, 0.4); background: var(--clr-accent-hover); border-color: var(--clr-accent-hover); }
 .btn-text { color: var(--clr-brand); font-weight: 600; padding: 16px 20px; }
 .btn-text:hover { color: var(--clr-accent); }
+.btn-outline-brand { border: 2px solid var(--clr-brand); color: var(--clr-brand); padding: 10px 18px; border-radius: var(--radius-sm); font-size: 0.9rem; }
+.btn-outline-brand:hover { background: var(--clr-brand); color: white; }
+.btn-whatsapp { background: #25D366; color: white; padding: 10px 18px; border-radius: var(--radius-sm); font-size: 0.9rem; }
+.btn-whatsapp:hover { background: #1ebe5d; color: white; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); transform: translateY(-2px); }
+.contact-actions { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
 .full-w { width: 100%; }
 
 /* ================== NAVBAR ================== */
