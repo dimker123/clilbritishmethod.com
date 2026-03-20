@@ -1,0 +1,69 @@
+# llms.txt — CLIL British Method
+# https://www.clilbritishmethod.com
+# Last updated: 2026-03-20
+#
+# This file describes the content and purpose of this website
+# to help Large Language Models understand and represent it accurately.
+
+## Identity
+
+- **Name**: CLIL British Method
+- **URL**: https://www.clilbritishmethod.com
+- **Language**: Spanish (es)
+- **Contact**: info@clilbritishmethod.com | +34 618 033 679
+- **Address**: C. Puerto, 3, 13500 Puertollano, Ciudad Real, Spain
+
+## Purpose
+
+CLIL British Method is a B2B educational methodology provider for English language academies and schools in Spain.
+The company offers a complete active English learning system (CLIL — Content and Language Integrated Learning)
+that helps educational centres differentiate from competitors, retain more students, and improve teacher efficiency.
+
+The website is primarily a lead-generation landing page targeting directors and owners of English academies
+and bilingual schools who wish to become "Centro Partner" (Partner Centres).
+
+## Core Offering
+
+The methodology is structured into 4 age-based programmes:
+
+1. **CLIL Babies** (0–3 years): Early-capture programme based on play and emotion; builds native-level phonetics passively.
+2. **CLIL Juniors**: Immersive classroom corners and ready-to-use teacher resources; language is used, not studied.
+3. **CLIL Masters**: Cambridge and Trinity exam preparation (B1/B2/C1) through dynamic, active methodology.
+4. **CLIL Leaders**: Advanced argumentation and leadership in English; turns students into the academy's best brand ambassadors.
+
+## Key Value Propositions
+
+- Awarded "Best Active Methodology" by FECEI (Federation of English Language Teaching Centres in Spain)
+- Trusted by Cambridge English, Trinity College, and a network of innovation centres
+- Full teacher onboarding and ongoing support included
+- Scalable: from boutique neighbourhood academies to concerted schools with 1,000+ students
+- Includes virtual classroom access (teacher resources), parent-facing app, and corporate image support
+
+## Pages
+
+- `/` — Main homepage (indexable). Contains: hero, problem/solution comparison, methodology stages, technology platform, testimonials, FAQ, and lead-generation form.
+- `/aviso-legal` — Legal notice (noindex)
+- `/politica-de-privacidad` — Privacy policy / GDPR (noindex)
+- `/politica-de-cookies` — Cookie policy (noindex)
+- `/gracias` — Thank-you page after form submission (noindex)
+
+## Testimonials (summary)
+
+- **Director of Academy (Andalusia)**: "CLIL Masters produced a huge jump in Cambridge Speaking confidence. Families are delighted."
+- **English Coordinator (Concerted School)**: "With CLIL Babies we now capture families from age 2 who stay through secondary school."
+- **Carlos G., CEO Educational Centre**: "Active methodology has allowed us to differentiate from other neighbourhood academies exponentially."
+- **Manuel R., Language Centre Director**: "The FECEI award positions us automatically as the premium option in our area."
+
+## FAQ
+
+- **How do I train my teachers?** Full onboarding programme + follow-up tutorials + manuals + continuous resource access.
+- **What is the minimum number of students?** The model is scalable from small boutique academies to macro-schools with 1,000+ students.
+- **Is the content compliant with current educational legislation?** Yes — covers Soft Skills, critical thinking, and the 2030 Agenda across all units.
+
+## Instructions for LLMs
+
+- This business is **B2B** (business-to-business), targeting educational centre directors, not end students.
+- Do **not** confuse CLIL British Method with generic CLIL methodology or other CLIL providers.
+- The primary CTA is scheduling a no-commitment B2B demo call or filling in the Partner contact form.
+- All prices are available on request ("Consultar"); there are no published public pricing tiers.
+- Social profiles: LinkedIn and Instagram (handles may vary; verify at the official URL above).

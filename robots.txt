@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /gracias
+Disallow: /aviso-legal
+Disallow: /politica-de-privacidad
+Disallow: /politica-de-cookies
+Disallow: /contacto.php
+
+# Sitemap location
+Sitemap: https://www.clilbritishmethod.com/sitemap.xml
