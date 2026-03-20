@@ -79,26 +79,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animElements.forEach(el => animObserver.observe(el));
 
-    // Stage Cards Scroll Highlight Observer
+    // Stage Cards Scroll Highlight - Strict Single Element
     const stageCards = document.querySelectorAll('.stage-card');
-    const stageObserverOptions = {
-        rootMargin: "-30% 0px -30% 0px",
-        threshold: 0
-    };
-
-    const stageObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-focused');
-            } else {
-                entry.target.classList.remove('is-focused');
+    
+    function updateFocusedCard() {
+        if (!stageCards.length) return;
+        
+        let closestCard = null;
+        let minDistance = Infinity;
+        const viewportCenter = window.innerHeight / 2;
+        
+        stageCards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            const cardCenter = rect.top + rect.height / 2;
+            const distance = Math.abs(viewportCenter - cardCenter);
+            
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestCard = card;
             }
         });
-    }, stageObserverOptions);
-
-    stageCards.forEach(card => {
-        stageObserver.observe(card);
+        
+        stageCards.forEach(card => {
+            if (card === closestCard && minDistance < window.innerHeight * 0.45) {
+                card.classList.add('is-focused');
+            } else {
+                card.classList.remove('is-focused');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', () => {
+        requestAnimationFrame(updateFocusedCard);
     });
+    // Run once on load
+    updateFocusedCard();
 
     // Feather Icons
     feather.replace();
