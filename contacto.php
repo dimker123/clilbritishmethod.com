@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = strip_tags(trim($_POST["nombre"]));
     $academia = strip_tags(trim($_POST["academia"]));
@@ -20,9 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content .= "Contacto (Email/Tlf): " . $contacto . "\n";
     $email_content .= "Nº Alumnos: " . $alumnos . "\n";
 
-    $email_headers = "From: noreply@clilbritishmethod.com\r\n";
+    $email_headers = "From: info@clilbritishmethod.com\r\n";
     $email_headers .= "Reply-To: " . $contacto . "\r\n";
+    $email_headers .= "MIME-Version: 1.0\r\n";
     $email_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $email_headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
     if (mail($recipient, $subject, $email_content, $email_headers)) {
         header("Location: index.html?success=1");
