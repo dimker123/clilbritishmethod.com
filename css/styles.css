@@ -313,13 +313,14 @@ button, input, select { font-family: inherit; }
     .app-content { order: -1; text-align: center; }
     .app-features { align-items: center; }
     .funnel-wrapper { grid-template-columns: 1fr; padding: 40px; }
+    
+    /* Navbar Tablet/Mobile Mode */
+    .nav-links, .nav-actions .btn-premium { display: none; }
+    .menu-btn { display: block; }
 }
 @media (max-width: 768px) {
     /* Safe Bounds */
     html, body { overflow-x: hidden !important; width: 100% !important; max-width: 100% !important; position: relative; }
-    
-    .nav-links, .nav-actions .btn-premium { display: none; }
-    .menu-btn { display: block; }
 
     /* Global Spacing */
     .section { padding: 50px 0; }
