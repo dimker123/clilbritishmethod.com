@@ -9,12 +9,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/Favicon__CLIL%20BRITISH_METHOD.png">
     <!-- Modern Fonts -->
+    <!-- Google Fonts — carga no bloqueante -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap"></noscript>
 
     <link rel="stylesheet" href="css/styles.css?v=6">
 
@@ -190,7 +189,7 @@
     <header class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#inicio" class="brand">
-                <img src="img/Logo_CLIL%20BRITISH_METHOD.png" alt="CLIL British Method" class="logo-img">
+                <img src="img/Logo_CLIL%20BRITISH_METHOD.png" alt="CLIL British Method" class="logo-img" width="350" height="120" fetchpriority="high">
             </a>
             <ul class="nav-links">
                 <li><a href="#solucion">Por qué CLIL</a></li>
@@ -242,7 +241,7 @@
             
             <div class="hero-visual reveal-fade-in">
                 <div class="image-wrapper glass-panel">
-                    <img src="img/hero_kids.png" alt="Aulas dinámicas CLIL Method" class="hero-image">
+                    <img src="img/hero_kids.png" alt="Aulas dinámicas CLIL Method" class="hero-image" width="600" height="750" fetchpriority="high">
                     <div class="floating-card float-1">
                         <i data-feather="trending-up" class="check-icon"></i>
                         <span>+40% de Retención de Alumnado</span>
@@ -263,7 +262,7 @@
             <div class="logos">
                 <span class="logo-item"><i data-feather="award"></i> Cambridge English</span>
                 <span class="logo-item"><i data-feather="book-open"></i> Trinity College</span>
-                <span class="logo-item"><img src="img/fecei_badge.png" alt="Premio FECEI Mejor Metodología Activa" style="width:24px;vertical-align:middle;margin-right:8px;"> FECEI Winner</span>
+                <span class="logo-item"><img src="img/fecei_badge.png" alt="Premio FECEI Mejor Metodología Activa" width="24" height="24" loading="lazy" style="width:24px;vertical-align:middle;margin-right:8px;"> FECEI Winner</span>
                 <span class="logo-item"><i data-feather="globe"></i> Red de Centros de Innovación</span>
             </div>
         </div>
@@ -355,7 +354,7 @@
             <div class="app-visual reveal-fade-in">
                 <div class="mockup-container">
                     <div class="mockup-glow"></div>
-                    <img src="img/app_mockup.png" alt="Software de gestión y app para academias" class="app-img">
+                    <img src="img/app_mockup.png" alt="Software de gestión y app para academias" class="app-img" width="500" height="500" loading="lazy">
                 </div>
             </div>
             <div class="app-content reveal-fade-up">
@@ -576,9 +575,12 @@
         <i data-feather="arrow-up"></i>
     </button>
 
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js" defer></script>
     <script>
-        feather.replace();
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof feather !== 'undefined') feather.replace();
+        });
     </script>
-    <script src="js/main.js?v=4"></script>
+    <script src="js/main.js?v=4" defer></script>
 </body>
 </html>
