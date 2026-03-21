@@ -181,4 +181,40 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    /* =======================================
+       8. COOKIE BANNER (AEPD Compliant)
+    ======================================= */
+    if (!localStorage.getItem('cookieConsent')) {
+        const banner = document.createElement('div');
+        banner.className = 'cookie-banner';
+        banner.innerHTML = `
+            <div class="cookie-content">
+                <h4>Privacidad y Cookies</h4>
+                <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte publicidad personalizada en base a un perfil elaborado a partir de tus hábitos de navegación. <a href="politica-de-cookies.html">Más información</a>.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="btn-accept-cookies" class="btn btn-primary">Aceptar todas</button>
+                <button id="btn-reject-cookies" class="btn btn-outline-brand">Rechazar</button>
+            </div>
+        `;
+        document.body.appendChild(banner);
+        
+        // Timeout for CSS transition
+        setTimeout(() => banner.classList.add('show'), 100);
+
+        document.getElementById('btn-accept-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            banner.classList.remove('show');
+            setTimeout(() => banner.remove(), 500);
+            // Here you can initialize analytics scripts if accepted
+        });
+
+        document.getElementById('btn-reject-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'rejected');
+            banner.classList.remove('show');
+            setTimeout(() => banner.remove(), 500);
+        });
+    }
+
 });
