@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         banner.innerHTML = `
             <div class="cookie-content">
                 <h4>Privacidad y Cookies</h4>
-                <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte publicidad personalizada en base a un perfil elaborado a partir de tus hábitos de navegación. <a href="politica-de-cookies.html">Más información</a>.</p>
+                <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte publicidad personalizada en base a un perfil elaborado a partir de tus hábitos de navegación. <a href="politica-de-cookies.html" aria-label="Leer más información sobre nuestra política de cookies">Más información</a>.</p>
             </div>
             <div class="cookie-buttons">
                 <button id="btn-accept-cookies" class="btn btn-primary">Aceptar todas</button>
