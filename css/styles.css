@@ -86,7 +86,7 @@ button, input, select { font-family: inherit; }
     padding: 14px 32px; border-radius: var(--radius-pill);
     box-shadow: var(--shadow-md); border: 1px solid rgba(255,255,255,0.1);
 }
-.btn-premium:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); background: #000; }
+.btn-premium:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); background: var(--clr-accent); border-color: var(--clr-accent); }
 .btn-primary-lg { background: var(--clr-accent); color: white; padding: 16px 36px; border-radius: var(--radius-pill); font-size: 1.1rem; box-shadow: 0 10px 20px rgba(200, 16, 46, 0.3); transition: all 0.3s ease; border: 1px solid transparent; }
 .btn-primary-lg:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(200, 16, 46, 0.4); background: var(--clr-accent-hover); border-color: var(--clr-accent-hover); }
 .btn-text { color: var(--clr-brand); font-weight: 600; padding: 16px 20px; }
