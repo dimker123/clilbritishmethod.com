@@ -9,13 +9,61 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/Favicon__CLIL%20BRITISH_METHOD.png">
     <!-- Modern Fonts -->
-    <!-- Google Fonts — carga no bloqueante -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap"></noscript>
+    <!-- Preload crítico LCP -->
+    <link rel="preload" as="image" href="img/Logo_CLIL%20BRITISH_METHOD.png" fetchpriority="high">
+    <link rel="preload" as="image" href="img/hero_kids.png" fetchpriority="high">
 
-    <link rel="stylesheet" href="css/styles.css?v=6">
+    <!-- CSS crítico inline (above-the-fold) -->
+    <style>
+    :root{--clr-brand:#012169;--clr-brand-light:#0a3188;--clr-accent:#C8102E;--clr-accent-hover:#a00b23;--clr-surface:#ffffff;--clr-bg-alt:#f8fafc;--clr-text-main:#334155;--clr-text-muted:#64748b;--grad-primary:linear-gradient(135deg,#012169 0%,#0a3188 100%);--grad-text:linear-gradient(to right,#012169,#C8102E);--grad-gold:linear-gradient(135deg,#e31837 0%,#a00b23 100%);--font-head:'Outfit',sans-serif;--font-body:'Inter',sans-serif;--radius-sm:8px;--radius-md:16px;--radius-lg:24px;--radius-pill:999px;--shadow-sm:0 4px 6px -1px rgba(0,0,0,.05);--shadow-md:0 10px 25px -3px rgba(15,23,42,.08);--shadow-xl:0 25px 50px -12px rgba(15,23,42,.15);--glass-bg:rgba(255,255,255,.75);--glass-border:1px solid rgba(255,255,255,.5);--ease-out:cubic-bezier(.16,1,.3,1);--transition:.3s var(--ease-out)}
+    *{margin:0;padding:0;box-sizing:border-box}
+    img,video{max-width:100%;height:auto}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);color:var(--clr-text-main);background-color:var(--clr-surface);line-height:1.6;overflow-x:hidden;opacity:1;transition:opacity .5s}
+    body.loading{opacity:0}
+    h1,h2,h3,h4,h5{font-family:var(--font-head);color:var(--clr-brand);line-height:1.2}
+    a{text-decoration:none;transition:var(--transition)}
+    button,input,select{font-family:inherit}
+    .container{max-width:1280px;margin:0 auto;padding:0 5%}
+    .text-gradient{background:var(--grad-text);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;border:none;cursor:pointer;transition:var(--transition);white-space:nowrap}
+    .btn-primary-lg{background:var(--clr-accent);color:#fff;padding:16px 36px;border-radius:var(--radius-pill);font-size:1.1rem;box-shadow:0 10px 20px rgba(200,16,46,.3);transition:all .3s ease;border:1px solid transparent}
+    .btn-text{color:var(--clr-brand);font-weight:600;padding:16px 20px}
+    .btn-premium{background:var(--clr-brand);color:#fff;padding:14px 32px;border-radius:var(--radius-pill);box-shadow:var(--shadow-md);border:1px solid rgba(255,255,255,.1)}
+    .navbar{position:fixed;top:0;left:0;width:100%;z-index:99;padding:20px 0;transition:var(--transition)}
+    .navbar.scrolled{padding:12px 0;background:var(--glass-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:var(--glass-border);box-shadow:var(--shadow-sm)}
+    .nav-container{display:flex;justify-content:space-between;align-items:center}
+    .brand{display:flex;align-items:center;gap:8px;text-decoration:none}
+    .logo-img{height:50px;width:auto}
+    .nav-links{display:flex;gap:40px;list-style:none}
+    .nav-links a{color:var(--clr-text-muted);font-weight:500;font-size:.95rem}
+    .nav-actions{display:flex;align-items:center;gap:20px}
+    .menu-btn{display:none;background:none;border:none;color:var(--clr-brand)}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:80px;overflow:hidden}
+    .hero-bg-blob{position:absolute;top:-10%;right:-5%;width:50vw;height:50vw;background:radial-gradient(circle,rgba(200,16,46,.1) 0%,rgba(255,255,255,0) 70%);border-radius:50%;z-index:-1}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:#fff;padding:6px 16px;border-radius:var(--radius-pill);box-shadow:var(--shadow-sm);margin-bottom:24px;font-weight:600;font-size:.85rem;color:var(--clr-brand);border:1px solid #f1f5f9}
+    .badge-icon{height:20px}
+    .hero-title{font-size:clamp(2.5rem,4.5vw,4.2rem);letter-spacing:-2px;margin-bottom:15px;line-height:1.1}
+    .hero-subtitle{font-size:1.25rem;font-weight:600;font-family:var(--font-head);color:var(--clr-accent);margin-bottom:20px;letter-spacing:1px}
+    .hero-desc{font-size:1.15rem;color:var(--clr-text-muted);margin-bottom:40px;max-width:480px}
+    .hero-cta-group{display:flex;align-items:center;gap:15px;flex-wrap:nowrap}
+    .glass-panel{background:var(--glass-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:var(--glass-border);border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);padding:16px;position:relative}
+    .hero-image{width:100%;border-radius:calc(var(--radius-lg) - 8px);object-fit:cover;aspect-ratio:4/5}
+    .floating-card{position:absolute;background:#fff;padding:12px 20px;border-radius:var(--radius-md);box-shadow:var(--shadow-md);display:flex;align-items:center;gap:12px;font-weight:600;font-size:.9rem;color:var(--clr-brand);animation:float 6s ease-in-out infinite}
+    .float-1{bottom:40px;left:-30px}.float-2{top:60px;right:-40px;animation-delay:2s}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-15px)}100%{transform:translateY(0)}}
+    .reveal-fade-up{opacity:0;transform:translateY(40px);transition:all .8s var(--ease-out)}
+    .reveal-fade-up.active{opacity:1;transform:translateY(0)}
+    .reveal-fade-in{opacity:0;transition:all 1s var(--ease-out)}
+    .reveal-fade-in.active{opacity:1}
+    @media(max-width:1024px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero-desc{margin:0 auto 40px}.hero-cta-group{justify-content:center;flex-wrap:wrap}}
+    @media(max-width:768px){html,body{overflow-x:hidden!important;width:100%!important;max-width:100%!important}.nav-links,.nav-actions .btn-premium{display:none}.menu-btn{display:block}.hero-title{font-size:2.4rem}.hero-badge{margin-top:30px}.hero-cta-group{flex-direction:column;width:100%}.hero-cta-group .btn{width:100%}.float-1{left:5px;bottom:10px;padding:6px 10px;font-size:.75rem;max-width:90%}.float-2{right:5px;top:10px;padding:6px 10px;font-size:.75rem;max-width:90%}}
+    </style>
+
+    <!-- Full stylesheet (no bloqueante) -->
+    <link rel="preload" as="style" href="css/styles.css?v=7" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/styles.css?v=7"></noscript>
 
     <!-- ============ SCHEMA.ORG STRUCTURED DATA ============ -->
 
@@ -262,7 +310,7 @@
             <div class="logos">
                 <span class="logo-item"><i data-feather="award"></i> Cambridge English</span>
                 <span class="logo-item"><i data-feather="book-open"></i> Trinity College</span>
-                <span class="logo-item"><img src="img/fecei_badge.png" alt="Premio FECEI Mejor Metodología Activa" width="24" height="24" loading="lazy" style="width:24px;vertical-align:middle;margin-right:8px;"> FECEI Winner</span>
+                <span class="logo-item"><img src="img/fecei_badge_48.png" alt="Premio FECEI Mejor Metodología Activa" width="24" height="24" loading="lazy" style="width:24px;vertical-align:middle;margin-right:8px;"> FECEI Winner</span>
                 <span class="logo-item"><i data-feather="globe"></i> Red de Centros de Innovación</span>
             </div>
         </div>
