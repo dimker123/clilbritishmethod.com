@@ -227,6 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
         muteToggleBtn.addEventListener('click', () => {
             if (heroVideo.muted) {
                 heroVideo.muted = false;
+                // Safari iOS workaround: force play again after unmuting
+                heroVideo.play().catch(e => console.log('Autoplay prevented', e));
                 muteToggleBtn.innerHTML = '<i data-feather="volume-2" style="color: var(--clr-brand); width: 20px; height: 20px;"></i>';
             } else {
                 heroVideo.muted = true;
