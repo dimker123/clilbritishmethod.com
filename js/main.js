@@ -217,4 +217,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* =======================================
+       9. VIDEO SOUND TOGGLE
+    ======================================= */
+    const heroVideo = document.getElementById('hero-video');
+    const muteToggleBtn = document.getElementById('mute-toggle-btn');
+    
+    if (heroVideo && muteToggleBtn) {
+        muteToggleBtn.addEventListener('click', () => {
+            if (heroVideo.muted) {
+                heroVideo.muted = false;
+                muteToggleBtn.innerHTML = '<i data-feather="volume-2" style="color: var(--clr-brand); width: 20px; height: 20px;"></i>';
+            } else {
+                heroVideo.muted = true;
+                muteToggleBtn.innerHTML = '<i data-feather="volume-x" style="color: var(--clr-brand); width: 20px; height: 20px;"></i>';
+            }
+            if (typeof feather !== 'undefined') feather.replace();
+        });
+    }
+
 });

@@ -291,7 +291,10 @@
             
             <div class="hero-visual reveal-fade-in">
                 <div class="image-wrapper glass-panel">
-                    <img src="img/hero_kids.png" alt="Aulas dinámicas CLIL Method" class="hero-image" width="600" height="750" fetchpriority="high">
+                    <video id="hero-video" src="img/clilbritishmethod.com.mp4" class="hero-image" autoplay loop muted playsinline style="width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/5;"></video>
+                    <button id="mute-toggle-btn" aria-label="Activar/Desactivar sonido" style="position: absolute; bottom: 20px; right: 20px; background: #fff; border: none; box-shadow: var(--shadow-md); border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; z-index: 10; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        <i data-feather="volume-x" style="color: var(--clr-brand); width: 20px; height: 20px;"></i>
+                    </button>
                     <div class="floating-card float-1">
                         <i data-feather="trending-up" class="check-icon"></i>
                         <span>+40% de Retención de Alumnado</span>
